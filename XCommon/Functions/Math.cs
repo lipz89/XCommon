@@ -1,13 +1,25 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
 using System.Linq;
 
 namespace XCommon.Functions
 {
     public static class Math
     {
-        public static IEnumerable<int> AllPrimes()
+        public static IEnumerable<int> NaturalNumbers()
         {
-            var it = AllNaturalNumbers().Where(x => x > 1);
+            var n = 0;
+            while (true)
+            {
+                yield return n;
+                if (n == int.MaxValue)
+                    yield break;
+                n++;
+            }
+        }
+        public static IEnumerable<int> Primes()
+        {
+            var it = NaturalNumbers().Where(x => x > 1);
             while (true)
             {
                 var n = it.Take(1).FirstOrDefault();
@@ -16,12 +28,14 @@ namespace XCommon.Functions
             }
         }
 
-        public static IEnumerable<int> AllNaturalNumbers()
+        public static IEnumerable<int> Fibonaccis()
         {
-            var n = 0;
-            while (true)
+            int x = 1, y = 1;
+            while (x < int.MaxValue)
             {
-                yield return n;
+                yield return x;
+                y = y + x;
+                x = y - x;
             }
         }
     }
