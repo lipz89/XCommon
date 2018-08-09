@@ -1,5 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 using System.Linq;
 
 namespace XCommon.Functions
@@ -17,6 +16,7 @@ namespace XCommon.Functions
                 n++;
             }
         }
+
         public static IEnumerable<int> Primes()
         {
             var it = NaturalNumbers().Where(x => x > 1);
