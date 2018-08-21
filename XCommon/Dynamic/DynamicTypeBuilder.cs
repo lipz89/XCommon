@@ -5,8 +5,8 @@ using System.Linq.Expressions;
 using System.Reflection;
 using System.Reflection.Emit;
 using System.Threading;
-using XCommon.Exception;
 using XCommon.Extenstions;
+using XCommon.Utils;
 
 namespace XCommon.Dynamic
 {

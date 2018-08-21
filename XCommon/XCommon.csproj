@@ -47,9 +47,8 @@
     <Compile Include="Dynamic\DynamicTypeBuilder.cs" />
     <Compile Include="Dynamic\FastObjectCreator.cs" />
     <Compile Include="Dynamic\Reflaction.cs" />
-    <Compile Include="Exception\Check.cs" />
-    <Compile Include="Exception\Error.cs" />
-    <Compile Include="Exception\Guard.cs" />
+    <Compile Include="Utils\Check.cs" />
+    <Compile Include="Utils\Errors.cs" />
     <Compile Include="Extenstions\EnumerableExtensions.cs" />
     <Compile Include="Extenstions\StringExtensions.cs" />
     <Compile Include="Extenstions\TypeExtensions.cs" />
@@ -60,7 +59,9 @@
     <Compile Include="Serializer\ISerializer.cs" />
     <Compile Include="Serializer\JsonSerializer.cs" />
     <Compile Include="Serializer\XmlSerializer.cs" />
+    <Compile Include="Threading\TaskHelpersExtensions.cs" />
     <Compile Include="Utils\Converter.cs" />
+    <Compile Include="Threading\TaskHelpers.cs" />
     <Compile Include="Utils\XEqualityComparer.cs" />
     <Compile Include="Utils\XHash.cs" />
   </ItemGroup>

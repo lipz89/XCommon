@@ -2,7 +2,7 @@
 using System.Collections;
 using System.Reflection;
 using System.Reflection.Emit;
-using XCommon.Exception;
+using XCommon.Utils;
 
 namespace XCommon.Dynamic
 {

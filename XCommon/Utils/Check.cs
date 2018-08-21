@@ -1,9 +1,9 @@
 ﻿using System;
 using System.Collections;
-using System.Linq;
 using XCommon.Extenstions;
+using XCommon.Utils;
 
-namespace XCommon.Exception
+namespace XCommon.Utils
 {
     /// <summary>
     /// 检查类
@@ -23,9 +23,9 @@ namespace XCommon.Exception
             if (precondition())
             {
                 if (argName == null)
-                    Guard.ThrowApplicationException(message);
+                    throw Errors.Application(message);
                 else
-                    Guard.ThrowArgumentException(argName, message);
+                    throw Errors.ArgumentError(argName, message);
             }
         }
         /// <summary>
@@ -44,9 +44,9 @@ namespace XCommon.Exception
             {
                 message = message ?? "值不能为类型的默认值。";
                 if (argName == null)
-                    Guard.ThrowApplicationException(message);
+                    throw Errors.Application(message);
                 else
-                    Guard.ThrowArgumentException(argName, message);
+                    throw Errors.ArgumentError(argName, message);
             }
         }
 
@@ -67,9 +67,9 @@ namespace XCommon.Exception
             {
                 message = message ?? "值不能为 null。";
                 if (argName == null)
-                    Guard.ThrowApplicationException(message);
+                    throw Errors.Application(message);
                 else
-                    Guard.ThrowArgumentException(argName, message);
+                    throw Errors.ArgumentError(argName, message);
             }
         }
 
@@ -89,9 +89,9 @@ namespace XCommon.Exception
             {
                 message = message ?? "值不能为 null、空或者空白字符串。";
                 if (argName == null)
-                    Guard.ThrowApplicationException(message);
+                    throw Errors.Application(message);
                 else
-                    Guard.ThrowArgumentException(argName, message);
+                    throw Errors.ArgumentError(argName, message);
             }
         }
 
@@ -109,9 +109,9 @@ namespace XCommon.Exception
             {
                 message = message ?? "值不能为 null 或空序列。";
                 if (argName == null)
-                    Guard.ThrowApplicationException(message);
+                    throw Errors.Application(message);
                 else
-                    Guard.ThrowArgumentException(argName, message);
+                    throw Errors.ArgumentError(argName, message);
             }
         }
 
@@ -125,7 +125,7 @@ namespace XCommon.Exception
         {
             if (precondition())
             {
-                Guard.ThrowInvalidOperationException(message);
+                Errors.InvalidOperation(message);
             }
         }
 
@@ -139,7 +139,7 @@ namespace XCommon.Exception
         {
             if (precondition())
             {
-                Guard.ThrowApplicationException(message);
+                throw Errors.Application(message);
             }
         }
     }

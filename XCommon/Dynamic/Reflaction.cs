@@ -1,6 +1,6 @@
 ﻿using System;
 using System.Reflection;
-using XCommon.Exception;
+using XCommon.Utils;
 
 namespace XCommon.Dynamic
 {

@@ -1,5 +1,5 @@
 ﻿using System;
-using XCommon.Exception;
+using XCommon.Utils;
 
 namespace XCommon.Extenstions
 {

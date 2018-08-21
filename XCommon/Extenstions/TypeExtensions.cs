@@ -4,7 +4,7 @@ using System.Linq;
 using System.Reflection;
 using System.Runtime.CompilerServices;
 using System.Text;
-using XCommon.Exception;
+using XCommon.Utils;
 
 namespace XCommon.Extenstions
 {

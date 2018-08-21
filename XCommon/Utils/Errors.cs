@@ -4,12 +4,12 @@ using System.IO;
 using System.Linq;
 using System.Runtime.Serialization;
 
-namespace XCommon.Exception
+namespace XCommon.Utils
 {
     /// <summary>
     /// 返回各类异常错误
     /// </summary>
-    public static class Error
+    public static class Errors
     {
         #region Exception
 
