@@ -8,11 +8,9 @@ namespace XCommon.Functions
         public static IEnumerable<int> NaturalNumbers()
         {
             var n = 0;
-            while (true)
+            while (n < int.MaxValue)
             {
                 yield return n;
-                if (n == int.MaxValue)
-                    yield break;
                 n++;
             }
         }
@@ -22,7 +20,7 @@ namespace XCommon.Functions
             var it = NaturalNumbers().Where(x => x > 1);
             while (true)
             {
-                var n = it.Take(1).FirstOrDefault();
+                var n = it.FirstOrDefault();
                 yield return n;
                 it = it.Where(x => x % n > 0);
             }
